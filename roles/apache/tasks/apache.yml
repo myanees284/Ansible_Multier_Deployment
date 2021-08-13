@@ -18,9 +18,11 @@
     group: www-data
     mode: 0644
 
-- name: Set up Apache virtual host file
-  template:
-    src: vhost.tpl
-    dest: /etc/httpd/conf/httpd.conf
+- name: Change the port
+  lineinfile:
+    path: /etc/httpd/conf/httpd.conf
+    regexp: '^Listen '
+    insertafter: '^#Listen '
+    line: 'Listen {{apache_port}}'
   notify:
     restart_apache

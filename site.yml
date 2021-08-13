@@ -4,3 +4,4 @@
     - apache
   vars:
     - doc_root: /var/www/example
+    - apache_port: 79
