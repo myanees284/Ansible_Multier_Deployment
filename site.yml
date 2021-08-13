@@ -1,0 +1,6 @@
+- hosts: tag_apache_server
+  become: true
+  roles:
+    - apache
+  vars:
+    - doc_root: /var/www/example
