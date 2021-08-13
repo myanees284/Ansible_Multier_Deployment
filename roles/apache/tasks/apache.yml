@@ -21,6 +21,6 @@
 - name: Set up Apache virtual host file
   template:
     src: vhost.tpl
-    dest: /etc/apache2/sites-available/000-default.conf
+    dest: /etc/httpd/conf/httpd.conf
   notify:
     restart_apache
