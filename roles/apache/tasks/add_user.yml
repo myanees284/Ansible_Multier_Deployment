@@ -1,0 +1,9 @@
+- name: Create a group
+  group:
+    name: www-data
+    state: present
+
+- name: Create user
+  user:
+    name: www-data
+    group: www-data
